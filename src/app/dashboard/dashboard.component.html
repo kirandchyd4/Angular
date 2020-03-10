@@ -1,0 +1,233 @@
+<div>
+    <button class="button" (click)="deleteSelectedRows()" [disabled]="!rowsSelected()">
+            Delete Selected Row
+    </button>
+</div>
+<Div>
+<ag-grid-angular
+    style="height: 250px;"
+    class="ag-theme-balham"
+    [rowData]="rowData"
+	[columnDefs]="columnDefs" rowSelection='single' (rowClicked)='onRowClicked($event)'
+	(gridReady)='onGridReady($event)'
+    >
+</ag-grid-angular>
+</Div>
+<!--
+<mat-dialog-content>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+<button mat-raised-button color="primary" mat-dialog-close tabindex="-1">{{cancelButtonText}}</button>
+</mat-dialog-actions>-->
+
+<div class=" border border-info rounded"   >
+<div class="kt-container  kt-grid__item kt-grid__item--fluid">
+  <div class="row">
+    <div class="col-md-7">
+        <div class="kt-portlet kt-portlet--height-fluid">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+            
+                    <b> API Usage Summary : </b>
+            
+            </div>
+    
+        </div>
+        <div class="kt-portlet__body">
+            <div class="kt-widget13">
+                <div class="kt-widget13__item">
+                    <span class="kt-widget13__desc">
+                        <b>API Service Name : </b>
+                    </span>
+                    <span class="kt-widget13__text kt-widget13__text--bold">
+                        {{apiName}}
+					</span>
+					<span class="kt-widget13__desc">
+						<button type="button" class="button"  (click)="myFunc()" mdbWavesEffect  style="float: right;">Try it Yourself &nbsp;&nbsp;</button>
+						</span>
+                </div>
+                <div class="kt-widget13__item">
+                    <span class="kt-widget13__desc kt-align-right">
+                        <b>Description: </b>
+                    </span>
+                    <span class="kt-widget13__text kt-widget13__text--bold">
+                          {{apiDescription}}
+					</span>
+					
+                </div>
+                <div class="kt-widget13__item">
+                    <span class="kt-widget13__desc">
+                        <b>EndPoint : </b>
+                    </span>
+                    <span class="kt-widget13__text">
+                        {{apiEndPoint}}
+                        
+					</span>
+					
+				
+                </div>
+                <div class="border border-info rounded"  >
+                    <span class="kt-widget13__desc">
+                        <b>Sample Input:</b>
+                    </span>
+                    <span class="kt-widget13__text kt-widget13__text--bold">
+              <pre>
+                <code style="border:1;">
+                        {{selectedObject.sample_input}}
+            </code>
+            </pre>
+                    </span>
+                </div>
+                <div class="kt-widget13__item">
+                    <span class="kt-widget13__desc">
+                        <b>Access Token:</b>
+                    </span>
+                    <span class="kt-wi	dget13__text">
+                        {{access_token}}
+                    </span>
+                </div>
+                <div class="kt-widget13__item">
+                    <span class="kt-widget13__desc">
+                        <b>Contact Details:</b>
+                    </span>
+                    <span class="kt-widget13__text  kt-font-brand kt-widget13__text--bold">
+                        {{contact}}
+					 </span><span class="kt-widget13__desc">
+						<button type="button" class="button"  (click)="myFunc2()" mdbWavesEffect  style="float: right;">FeedBack</button>
+						</span>
+					 
+
+                 </div>
+             </div>
+        </div>
+    </div>
+      </div>
+    <div class="col-md-5">
+  <div class="kt-portlet kt-portlet--height-fluid">
+	<div class="kt-portlet__head">
+		<div class="kt-portlet__head-label">
+			
+				<b>Similar API :</b>
+			
+		</div>
+
+	</div>
+	<div class="kt-portlet__body">
+		<div class="tab-content">
+			<div class="tab-pane active" id="kt_widget5_tab1_content" aria-expanded="true">
+				<div class="kt-widget5" style="cursor:pointer;">
+					<div class="kt-widget5__item" (click)="itemSelected('facialRecognition')">
+						<div class="kt-widget5__content">
+							<div class="kt-widget5__pic">
+								<img class="kt-widget7__img" src="static/assets/img/fr.jpeg" alt="">
+							</div>
+							<div class="kt-widget5__section">
+								<a class="kt-widget5__title">
+									{{apiName}}
+								</a>
+								<p class="kt-widget5__desc">
+									{{apiDescription}}
+								</p>
+								<div class="kt-widget5__info">
+									<span>Author:</span>
+									<span class="kt-font-info">{{apiOwner}}</span>
+									<span>Released:</span>
+									<span class="kt-font-info">{{releaseDate}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="kt-widget5__content">
+							<div class="kt-widget5__stats">
+								<span class="kt-widget5__number">192</span>
+								<span class="kt-widget5__sales">Hits</span>&nbsp;&nbsp;&nbsp;
+								<span class="kt-widget5__number">5.0</span>
+								<span class="kt-widget5__votes">Ratings</span>
+
+							</div>
+							<div class="kt-widget5__stats">
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="kt-widget5__item" (click)="itemSelected('sentimentAnalysis')">
+						<div class="kt-widget5__content">
+							<div class="kt-widget5__pic">
+                <img class="kt-widget7__img" src="static/assets/img/sa.jpeg" alt="">
+							</div>
+							<div class="kt-widget5__section">
+								<a class="kt-widget5__title">
+									Sentiment Analysis on Cases
+								</a>
+								<p class="kt-widget5__desc">
+									Text analysis and find the sentiment of the customer raising the incident
+								</p>
+								<div class="kt-widget5__info">
+									<span>Author:</span>
+									<span class="kt-font-info">Parmesh A</span>
+									<span>Released:</span>
+									<span class="kt-font-info">02.11.19</span>
+								</div>
+							</div>
+						</div>
+						<div class="kt-widget5__content">
+							<div class="kt-widget5__stats">
+								<span class="kt-widget5__number">24</span>
+								<span class="kt-widget5__sales">Hits</span>&nbsp;&nbsp;&nbsp;
+								<span class="kt-widget5__number">4.8</span>
+								<span class="kt-widget5__votes">Ratings</span>
+							</div>
+							<div class="kt-widget5__stats">
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="kt-widget5__item" (click)="itemSelected('intentIdentification')">
+						<div class="kt-widget5__content">
+							<div class="kt-widget5__pic">
+                <img class="kt-widget7__img" src="static/assets/img/id.png" alt="">
+							</div>
+							<div class="kt-widget5__section">
+								<a class="kt-widget5__title">
+									Intent Identification
+								</a>
+								<p class="kt-widget5__desc">
+									{{intentIdentification}}
+								</p>
+								<div class="kt-widget5__info">
+									<span>Author:</span>
+									<span class="kt-font-info">{{author}}</span>
+									<span>Released:</span>
+									<span class="kt-font-info">{{release}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="kt-widget5__content">
+							<div class="kt-widget5__stats">
+								<span class="kt-widget5__number">21</span>
+								<span class="kt-widget5__sales">Hits</span> &nbsp;&nbsp;&nbsp;
+								<span class="kt-widget5__number">{{ratting}}</span>
+								<span class="kt-widget5__votes">Ratings</span>
+							</div>
+							<div class="kt-widget5__stats">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+
+  
+</div>
+</div>
+</div>
+
+

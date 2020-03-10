@@ -1,0 +1,73 @@
+<div class="border border-info rounded"   style="padding: 30px;">
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <div class="row">
+      <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+      </ngx-charts-bar-vertical>
+    </div>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <div class="row">
+      <ngx-charts-bar-vertical-normalized
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+      </ngx-charts-bar-vertical-normalized>
+    </div>
+  </div>
+
+  <div class="column" style="background-color:#ccc;">
+    <div class="form-group row ml-5">
+    
+      <ngx-charts-bar-vertical-stacked
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+      </ngx-charts-bar-vertical-stacked>
+    </div>
+  </div>
+  
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+  
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    
+  </div>
+  <div class="column" style="background-color:#ccc;">
+   
+  </div>
+</div>
+</div>

@@ -1,0 +1,7 @@
+p {
+    font-family: Lato;
+  }
+
+  ul.steps-indicator li:last-child .done .step-indicator{ 
+    border-color:orange;
+}

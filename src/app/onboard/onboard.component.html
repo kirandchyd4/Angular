@@ -1,0 +1,319 @@
+
+<wizard>
+    <wizard-step stepTitle="API Details:" [canExit]='true'>
+      
+             <!--begin: Form Wizard Step 1-->
+             <div class="kt-wizard-v1__content border border-info rounded" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding: 30px;">
+                
+                <div >
+                    <div class="kt-wizard-v1__form">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div >
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-lg-3 col-form-label">API Name</label>
+                                        <div class="col-lg-3 col-xl-3">
+                                            <input class="form-control" type="text" [(ngModel)]="apiName">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-lg-3 col-form-label">API Owner</label>
+                                        <div class="col-lg-3 col-xl-3">
+                                            <input class="form-control" type="text" [(ngModel)]="apiOwner">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-lg-3 col-form-label">API Description</label>
+                                        <div class="col-lg-3 col-xl-3">
+                                            <input class="form-control" type="text" [(ngModel)]="apiDescription">
+                                            <!-- <span class="form-text text-muted">If you want your invoices addressed to a company. Leave blank to use your full name.</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-lg-3 col-form-label">Email Address</label>
+                                        <div class="col-lg-3 col-xl-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i class="la la-at"></i></span></div>
+                                                <input type="text" class="form-control" [(ngModel)]="apiEmail" placeholder="Email" aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-lg-3 col-form-label">Organization</label>
+                                        <div class="col-lg-3 col-xl-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i class="la la-phone"></i></span></div>
+                                                <input type="text" class="form-control" [(ngModel)]="apiOrganization"  placeholder="Phone" aria-describedby="basic-addon1">
+                                            </div>
+                                            <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="form-group form-group-last row">
+                                        <label class="col-xl-3 col-lg-3 col-form-label">Company Site</label>
+                                        <div class="col-lg-3 col-xl-3">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Username" value="loop">
+                                                <div class="input-group-append"><span class="input-group-text">.com</span></div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end: Form Wizard Step 1-->
+        
+
+      <button type="button" nextStep>Next Step</button>
+    </wizard-step>
+
+    <div>
+        
+
+    </div>
+
+
+    <wizard-step stepTitle="API Settings" awOptionalStep>
+    
+
+         <!--begin: Form Wizard Step 2-->
+         <div class="kt-wizard-v1__content border border-info rounded" data-ktwizard-type="step-content"  style="padding: 30px;">
+            <div class="kt-section kt-section--first">
+                <div class="kt-wizard-v1__form">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="kt-section__body">
+                                <div class="form-group row">
+                                    <div class="col-lg-3 col-xl-3">
+                                        <h3 class=" kt-section__title-md"></h3>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">Rate Limiting</label>
+                                    <div class="col-lg-3 col-xl-3">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" [(ngModel)]="rateLimiting" placeholder="-1" aria-describedby="basic-addon1">
+                                        </div>
+                                        <span class="form-text text-muted">Number of calls permitted per hour <a  class="kt-link">Enter -1 for no restriction</a>.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">Access Token</label>
+                                    <div class="col-lg-3 col-xl-3">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" [(ngModel)]="accesToken" placeholder="Email" aria-describedby="basic-addon1">
+                                        </div>
+                                        <span class="form-text text-muted">Provide the access token you like here </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-group-last row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">User Group</label>
+                                    <div class="col-lg-3 col-xl-3">
+                                        <div class="kt-checkbox-inline">
+                                            <label class="kt-checkbox">
+                                                <input type="checkbox" checked=""> My Organization
+                                                <span></span>
+                                            </label>
+                                            <label class="kt-checkbox">
+                                                <input type="checkbox" checked=""> Anyone in Cisco
+                                                <span></span>
+                                            </label>
+                                            <label class="kt-checkbox">
+                                                <input type="checkbox"> Custom
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end: Form Wizard Step 2-->
+
+
+
+      <button type="button" previousStep>Go to previous step</button>
+      <button type="button" nextStep>Go to next step</button>
+    </wizard-step>
+    <wizard-step stepTitle="Model Details">
+      
+
+         <!--begin: Form Wizard Step 3-->
+         <div class="kt-wizard-v1__content border border-info rounded " data-ktwizard-type="step-content" style="padding: 30px;">
+            <div class="kt-heading kt-heading--md">Model Details</div>
+            <div class="kt-form__section kt-form__section--first">
+                <div class="kt-wizard-v1__form">
+                  <div class="form-group">
+                                <label><b>Type</b></label>
+                                <div class="kt-radio-inline">
+                                    <label class="kt-radio" >
+                                        <input (click)="modelTypeSelected('endpoint')" type="radio" name="radio2" checked="checked" > Provide End Point
+                                        <span></span>
+                                    </label>
+                                    <label class="kt-radio" >
+                                        <input (click)="modelTypeSelected('modelfile')" type="radio" name="radio2"> Upload Model File
+                                        <span></span>
+                                    </label>
+                                    <label class="kt-radio" >
+                                        <input (click)="modelTypeSelected('automl')" type="radio" name="radio2"> AutoML
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <!-- <span class="form-text text-muted">Some help text goes here</span> -->
+                            </div>
+                  <div *ngIf="endpoint">
+
+                    <div class="form-group">
+                        <label>End Point</label>
+                        <input type="text" class="form-control" name="endpoint" placeholder="End Point" value="http://bgl-flywheel-4:5003/faceDetected">
+                        <span class="form-text text-muted">API Endpoint</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Headers</label>
+                        <textarea type="text" class="form-control" name="endpoint" placeholder="Headers" value="">{&#13;&#10;'Authorization': 'Bearer token' &#13;&#10; 'accept': 'application/json'&#13;&#10;}</textarea>
+                        <span class="form-text text-muted">Headers to be passed [Provide as key-value pair(JSON format)]</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Sample Input</label>
+                        <textarea type="text" class="form-control" name="endpoint" placeholder="Headers" value="" rows="10">{ &#13;&#10; 'group': 'test',&#13;&#10; 'base64Content':<<Base64 encoded image>>&#13;&#10; }</textarea>
+                        <span class="form-text text-muted">Sample Input to be passed by the user [Provide as key-value pair(JSON format)]</span>
+                    </div>
+
+
+                    </div>
+                    <div *ngIf="modelfile">
+                      <div class="form-group">
+                      <label>Framework:</label>
+                      <select name="framework" class="form-control">
+                          <option value="">Select</option>
+                          <option value="AF">TensorFlow1.x</option>
+                          <option value="AX">TensorFlow2.0</option>
+                          <option value="AL">Keras</option>
+                          <option value="DZ">PyTorch</option>
+
+                      </select>
+                  </div>
+                      <div class="form-group">
+                                    <label>Model File</label>
+                                    <div></div>
+                                    <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="customFile">
+                                          <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+                                     </div>
+
+                           <div class="form-group">
+                               <label>Sample Model Input Parameters</label>
+                               <textarea type="text" class="form-control" name="endpoint" placeholder="Headers" value="" rows="10">{ &#13;&#10; 'group': 'test',&#13;&#10; 'base64Content':<<Base64 encoded image>>&#13;&#10; }</textarea>
+                               <span class="form-text text-muted">Sample Input to be passed by the user [Provide as key-value pair(JSON format)]</span>
+                           </div>
+
+                           <div class="form-group">
+                               <label>Output</label>
+                               <input type="text" class="form-control" name="endpoint" placeholder="Headers" value="prediction">
+                               <span class="form-text text-muted">Output parameter to index from model output[give comma separated list]</span>
+                           </div>
+
+                    </div>
+
+
+                    <div *ngIf="automl">
+                      <div class="form-group">
+                      <label>Problem Type:</label>
+                      <select name="framework" class="form-control">
+                          <option value="">Select</option>
+                          <option value="AF">Regression</option>
+                          <option value="AX">Classification</option>
+                          <option value="AL">Clustering</option>
+                      </select>
+                  </div>
+                      <div class="form-group">
+                                    <label>Input File</label>
+                                    <div></div>
+                                    <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="customFile">
+                                          <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+                                     </div>
+
+
+                           <div class="form-group">
+                               <label>Output Variable</label>
+                               <input type="text" class="form-control" name="endpoint" placeholder="Headers" value="prediction">
+                               <span class="form-text text-muted">Output parameter to index from model output[give comma separated list]</span>
+                           </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end: Form Wizard Step 3-->
+
+      <button type="button" previousStep>Previous Step</button>
+      <button type="button" nextStep>Go to next step</button>
+     
+    </wizard-step>
+
+
+    <wizard-step stepTitle="Review your Details and Submit" awOptionalStep>
+        
+
+
+        
+                    <!--begin: Form Wizard Step 4-->
+                    <div class="kt-wizard-v1__content border border-info rounded" data-ktwizard-type="step-content" style="padding: 30px;">
+                      
+                        <div class="kt-form__section kt-form__section--first">
+                            <div class="kt-wizard-v1__review">
+                                <div class="kt-wizard-v1__review-item">
+                                    <div class="kt-wizard-v1__review-title">
+                                       <b> API Details :</b>
+                                    </div>
+                                    <div class="kt-wizard-v1__review-content">
+                                             API Name:  {{apiName}}
+                                        <br> API Owner: {{apiOwner}}
+                                        <br> API Description : {{apiDescription}}
+                                        <br> API email : {{apiEmail}}
+                                        <br> API Organization : {{apiOrganization}}
+                                    </div>
+                                </div>
+                                <div class="kt-wizard-v1__review-item">
+                                    <div class="kt-wizard-v1__review-title">
+                                        <br><b>  API Settings :</b> 
+                                    </div>
+                                    <div class="kt-wizard-v1__review-content">
+                                      Rate Limiting: -1
+                                        <br> Access Token: None
+                                        <br> User Group: My Organization & Anyone in Cisco
+                                    </div>
+                                </div>
+                                <div class="kt-wizard-v1__review-item">
+                                    <div class="kt-wizard-v1__review-title">
+                                        <br>  <b> Model Details :</b> 
+                                    </div>
+                                    <div class="kt-wizard-v1__review-content">
+                                        Provide End Point :
+                                        <br> End Point: {{apiEndPoint}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end: Form Wizard Step 4-->
+
+
+        <button type="button" previousStep>Go to previous step</button>
+        <button type="button" (click)="finishFunction()">Finish</button>
+        
+      </wizard-step>
+
+  </wizard>

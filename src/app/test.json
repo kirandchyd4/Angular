@@ -1,0 +1,14 @@
+[
+    { name: 'Facial Recognition', author: 'Celica', hits: 35000 ,year:2020,cat:'channels',revenue:2000,rating:4.8, description:'API endpoint to detect and recognize the face of the person in the image',url:'http://bgl-flywheel-4:5959/safsdf4245fsv',apiOrganization:'cisco1'},
+    { name: 'Sentiment Analysis', author: 'parma@cisco.com', hits: 32000 ,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'Text analysis and find the sentiment of the customer raising the incident',url:'http://bgl-flywheel-4:5959/safsdf4245fsv',apiOrganization:'cisco1'},
+    { name: 'Intent Identification', author: 'tulkundu@cisco.com', hits: 72000,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'Identify the intent from the given text. general repository of intents related to Cisco Order Management',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Toyota', author: 'Celica', hits: 35000 ,year:2020,cat:'channels',revenue:2000,rating:4.8, description:'japaneese Builder',url:'http://bgl-flywheel-4:5959/opadcaR4234fdgr',apiOrganization:'cisco1'},
+    { name: 'Ford', author: 'Mondeo', hits: 32000 ,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Porsche', author: 'Boxter', hits: 72000,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Toyota', author: 'Celica', hits: 35000 ,year:2020,cat:'channels',revenue:2000,rating:4.8, description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Ford', author: 'Mondeo', hits: 32000 ,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Porsche', author: 'Boxter', hits: 72000,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Toyota', author: 'Celica', hits: 35000 ,year:2020,cat:'channels',revenue:2000,rating:4.8, description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Ford', author: 'Mondeo', hits: 32000 ,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'},
+    { name: 'Porsche', author: 'Boxter', hits: 72000,year:2020,cat:'channels',revenue:2000 ,rating:4.8,description:'japaneese Builder',url:'https://toyoto.com',apiOrganization:'cisco1'}
+]
